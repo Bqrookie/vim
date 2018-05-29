@@ -33,9 +33,5 @@ The latest news about Vim can be found on the Vim home page: http://www.vim.org/
 
 If you have problems, have a look at the Vim documentation or tips: http://www.vim.org/docs.php http://vim.wikia.com/wiki/Vim_Tips_Wiki
 
-<<<<<<< HEAD
-## Authosr ##
-=======
 ## Author ## 
->>>>>>> d37ec1879d4c280e6bc4eddc0b8a15f6c72b04ee
 If you have a good suggestion, please contact me:balgfi@live.cn
