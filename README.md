@@ -1,4 +1,4 @@
-<img src="https://github.com/Bqrookie/vim/blob/master/timg.jpg" width="50" height="200" alt=""/>
+![baidu-images](http://www.baidu.com/img/bdlogo.png "baidu") 
 ## What is Vim? ##
 
 Vim is a greatly improved version of the good old UNIX editor Vi.  Many new
