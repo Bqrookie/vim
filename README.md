@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://github.com/Bqrookie/vim/blob/master/vim_logo.jpg" width="50" height="200" alt=""/></h1>
+<h1 align="center"><img src="https://github.com/Bqrookie/vim/blob/master/timg.jpg" width="50" height="200" alt=""/></h1>
 ## What is Vim? ##
 
 Vim is a greatly improved version of the good old UNIX editor Vi.  Many new
