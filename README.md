@@ -1,4 +1,7 @@
 ![logo-images](https://github.com/Bqrookie/vim/blob/master/timg.jpg)
+
+![Progress](http://progressed.io/bar/28?title=progress) 
+
 ## What is Vim? ##
 
 Vim is a greatly improved version of the good old UNIX editor Vi.  Many new
