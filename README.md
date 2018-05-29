@@ -1,4 +1,4 @@
-![baidu-images](http://www.baidu.com/img/bdlogo.png "baidu")
+<center>![baidu-images](http://www.baidu.com/img/bdlogo.png "baidu")</center>
 ## What is Vim? ##
 
 Vim is a greatly improved version of the good old UNIX editor Vi.  Many new
