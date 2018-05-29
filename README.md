@@ -20,9 +20,9 @@ mapped to commands by the user, and the mouse can be used.
 ## Introductions ## 
 Some popular places to get the latest Vim:
 
-Check out the git repository from github.
-Get the source code as an archive.
-Get a Windows executable from the vim-win32-installer repository.
+* Check out the git repository from github.
+* Get the source code as an archive.
+* Get a Windows executable from the vim-win32-installer repository.
 
 ## Installation ## 
 See one of these files for system-specific instructions.
