@@ -30,9 +30,9 @@ VIM是一个大大改进的旧的UNIX编辑器VI版本。已经添加了许多�
 如果您有很好的建议，请联系我：balgfi@live.cn
 
 ## 插件列表 ##
-[Vundle](https://github.com/VundleVim/Vundle.vim)
-[NERD_tree](https://www.vim.org/scripts/script.php?script_id=1658)
-[Taglist](https://www.vim.org/scripts/script.php?script_id=273)
+* [Vundle](https://github.com/VundleVim/Vundle.vim)
+* [NERD_tree](https://www.vim.org/scripts/script.php?script_id=1658)
+* [Taglist](https://www.vim.org/scripts/script.php?script_id=273)
 
 ## 主题 ##
-[solarized](https://github.com/altercation/vim-colors-solarized)
+* [Solarized](https://github.com/altercation/vim-colors-solarized)
