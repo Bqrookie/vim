@@ -31,7 +31,11 @@ The current version is window
 ## Information ## 
 * The latest news about Vim can be found on the Vim home page: http://www.vim.org/
 
-* If you have problems, have a look at the Vim documentation or tips: http://www.vim.org/docs.php http://vim.wikia.com/wiki/Vim_Tips_Wiki
+If you have problems, have a look at the Vim documentation or tips:
+
+* http://www.vim.org/docs.php
+* http://vim.wikia.com/wiki/Vim_Tips_Wiki
+
 
 ## Author ## 
 If you have a good suggestion, please contact me:balgfi@live.cn
