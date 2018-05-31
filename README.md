@@ -29,9 +29,17 @@ See one of these files for system-specific instructions.
 The current version is window
 
 ## Information ## 
-The latest news about Vim can be found on the Vim home page: http://www.vim.org/
+* The latest news about Vim can be found on the Vim home page: http://www.vim.org/
 
-If you have problems, have a look at the Vim documentation or tips: http://www.vim.org/docs.php http://vim.wikia.com/wiki/Vim_Tips_Wiki
+* If you have problems, have a look at the Vim documentation or tips: http://www.vim.org/docs.php http://vim.wikia.com/wiki/Vim_Tips_Wiki
 
 ## Author ## 
 If you have a good suggestion, please contact me:balgfi@live.cn
+
+## Plugin List ##
+[Vundle] (https://github.com/VundleVim/Vundle.vim)
+[NERD_tree] (https://www.vim.org/scripts/script.php?script_id=1658)
+[Taglist] (https://www.vim.org/scripts/script.php?script_id=273)
+
+## Theme ##
+[Solarized] (https://github.com/altercation/vim-colors-solarized)
