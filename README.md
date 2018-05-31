@@ -37,13 +37,10 @@ The current version is window
 If you have a good suggestion, please contact me:balgfi@live.cn
 
 ## Plugin List ##
-```
 [Vundle](https://github.com/VundleVim/Vundle.vim)
 [NERD_tree](https://www.vim.org/scripts/script.php?script_id=1658)
 [Taglist](https://www.vim.org/scripts/script.php?script_id=273)
-```
+
 
 ## Theme ##
-```
 ![Solarized](https://github.com/altercation/vim-colors-solarized)
-```
