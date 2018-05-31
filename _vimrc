@@ -1,5 +1,5 @@
 set nocompatible              " 去除VI一致性,必须要添加
-filetype off                  " 必须要添加
+filetype on                  " 必须要添加
 
 
 " 此处规定Vundle的路径  
@@ -53,6 +53,8 @@ set go=
   
 
 "运行python  
+
+"map <F5> :Tlist<CR>
 map <F6> :!python.exe %<CR>
 
 
