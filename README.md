@@ -29,7 +29,8 @@ See one of these files for system-specific instructions.
 The current version is window
 
 ## Information ## 
-* The latest news about Vim can be found on the Vim home page: http://www.vim.org/
+The latest news about Vim can be found on the Vim home page:
+* http://www.vim.org/
 
 If you have problems, have a look at the Vim documentation or tips:
 
