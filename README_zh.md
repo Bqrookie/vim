@@ -15,3 +15,24 @@ VIM是一个大大改进的旧的UNIX编辑器VI版本。已经添加了许多�
 * 获取源码进行安装.
 * 甚至是从VIM-WIN32-安装程序库获取Windows可执行文件.
 
+## 安装 ##
+请参阅这些文件之一以获取特定于系统的说明。
+当前版本暂且提供window系列
+
+## 信息 ##
+关于Vim的最新消息可以在Vim主页上找到：http://www.vim.org/
+
+如果您遇到问题，请查看Vim文档或提示：
+* http://www.vim.org/docs.php
+* http://vim.wikia.com/wiki/Vim_Tips_Wiki
+
+## 作者 ##
+如果您有很好的建议，请联系我：balgfi@live.cn
+
+## 插件列表 ##
+[Vundle](https://github.com/VundleVim/Vundle.vim)
+[NERD_tree](https://www.vim.org/scripts/script.php?script_id=1658)
+[Taglist](https://www.vim.org/scripts/script.php?script_id=273)
+
+## 主题 ##
+[solarized](https://github.com/altercation/vim-colors-solarized)
