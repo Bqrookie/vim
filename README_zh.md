@@ -20,7 +20,8 @@ VIM是一个大大改进的旧的UNIX编辑器VI版本。已经添加了许多�
 当前版本暂且提供window系列
 
 ## 信息 ##
-关于Vim的最新消息可以在Vim主页上找到：http://www.vim.org/
+关于Vim的最新消息可以在Vim主页上找到：
+* http://www.vim.org/
 
 如果您遇到问题，请查看Vim文档或提示：
 * http://www.vim.org/docs.php
