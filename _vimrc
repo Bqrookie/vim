@@ -1,12 +1,12 @@
-set nocompatible              " È¥³ıVIÒ»ÖÂĞÔ,±ØĞëÒªÌí¼Ó
-filetype on                  " ±ØĞëÒªÌí¼Ó
+set nocompatible              " å»é™¤VIä¸€è‡´æ€§,å¿…é¡»è¦æ·»åŠ 
+filetype on                   " å¿…é¡»è¦æ·»åŠ 
 
 
-" ´Ë´¦¹æ¶¨VundleµÄÂ·¾¶  
+" æ­¤å¤„è§„å®šVundleçš„è·¯å¾„  
 set rtp+=$VIM/vimfiles/bundle/vundle/  
 call vundle#rc('$VIM/vimfiles/bundle/')
 
-" ÈÃvundle¹ÜÀí²å¼ş°æ±¾,±ØĞë
+" è®©vundleç®¡ç†æ’ä»¶ç‰ˆæœ¬,å¿…é¡»
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'file://C:/Vim/vimfiles/bundle/NERD_tree'
 Plugin 'file://C:/Vim/vimfiles/bundle/solarized'
@@ -20,16 +20,16 @@ set fileencodings=ucs-bom,utf-8,cp936
 set fileencoding=gb2312
 set termencoding=utf-8 
 
-set number "ÏÔÊ¾ĞĞºÅ
-set nowrap    "²»×Ô¶¯ÕÛĞĞ
-set showmatch    "ÏÔÊ¾Æ¥ÅäµÄÀ¨ºÅ
-set scrolloff=3        "¾àÀë¶¥²¿ºÍµ×²¿3ĞĞ"
-set mouse=a        "ÆôÓÃÊó±ê
-set hlsearch        "ËÑË÷¸ßÁÁ
-syntax on    "Óï·¨¸ßÁÁ
+set number "æ˜¾ç¤ºè¡Œå·
+set nowrap    "ä¸è‡ªåŠ¨æŠ˜è¡Œ
+set showmatch    "æ˜¾ç¤ºåŒ¹é…çš„æ‹¬å·
+set scrolloff=3        "è·ç¦»é¡¶éƒ¨å’Œåº•éƒ¨3è¡Œ"
+set mouse=a        "å¯ç”¨é¼ æ ‡
+set hlsearch        "æœç´¢é«˜äº®
+syntax on    "è¯­æ³•é«˜äº®
 set ambiwidth=double
 
-" ÔÊĞíÍË¸ñ¼üÉ¾³ıºÍtab²Ù×÷  
+" å…è®¸é€€æ ¼é”®åˆ é™¤å’Œtabæ“ä½œ  
 set smartindent  
 set smarttab  
 set expandtab  
@@ -40,23 +40,23 @@ set backspace=2
 set textwidth=79
 colorscheme solarized
 
-"Æô¶¯Ê±ÒşÈ¥Ô®ÖúÌáÊ¾
+"å¯åŠ¨æ—¶éšå»æ´åŠ©æç¤º
 set shortmess=atI
 
-set guifont=Courier_New:h13:cANSI   " ÉèÖÃ×ÖÌå  
+set guifont=Courier_New:h13:cANSI   " è®¾ç½®å­—ä½“  
 
 set tags=tags;
 set autochdir
 
-" ÃüÁîÀ´Éè¶¨"tags"ÎÄµµµÄÂ·¾¶£¬ÕâÑùvim²ÅÄÜÕÒµ½tagsÎÄµµ
+" å‘½ä»¤æ¥è®¾å®š"tags"æ–‡æ¡£çš„è·¯å¾„ï¼Œè¿™æ ·vimæ‰èƒ½æ‰¾åˆ°tagsæ–‡æ¡£
 " set tags= "C:/Program Files (x86)/Vim/vimfiles/bundle/src"
 
 
-"Òş²Ø¹¤¾ßÀ¸²Ëµ¥À¸
+"éšè—å·¥å…·æ èœå•æ 
 set go=
   
 
-"ÔËĞĞpython  
+"è¿è¡Œpython  
 
 "map <F5> :Tlist<CR>
 map <F5> :!python.exe %<CR>
@@ -64,49 +64,49 @@ map <F5> :!python.exe %<CR>
 
 
 
-""""""""""""""""""""""""""""""""""""""""""NERDTreeÅäÖÃ
-"Éè¶¨Ä¬ÈÏ¿ªÆôÄ¿Â¼
+""""""""""""""""""""""""""""""""""""""""""NERDTreeé…ç½®
+"è®¾å®šé»˜è®¤å¼€å¯ç›®å½•
 au VimEnter * NERDTree 
-" ¹Ø±ÕNERDTree¿ì½İ¼ü
+" å…³é—­NERDTreeå¿«æ·é”®
 
 map <leader>t :NERDTreeToggle<CR>
 
 
 
-" ÏÔÊ¾ĞĞºÅ
+" æ˜¾ç¤ºè¡Œå·
 
 let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 
-" ÊÇ·ñÏÔÊ¾Òş²ØÎÄ¼ş
+" æ˜¯å¦æ˜¾ç¤ºéšè—æ–‡ä»¶
 
 let NERDTreeShowHidden=1
 
-" ÉèÖÃ¿í¶È
+" è®¾ç½®å®½åº¦
 
 let NERDTreeWinSize=31
 
-" ÔÚÖÕ¶ËÆô¶¯vimÊ±£¬¹²ÏíNERDTree
+" åœ¨ç»ˆç«¯å¯åŠ¨vimæ—¶ï¼Œå…±äº«NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 
-" ºöÂÔÒ»ÏÂÎÄ¼şµÄÏÔÊ¾
+" å¿½ç•¥ä¸€ä¸‹æ–‡ä»¶çš„æ˜¾ç¤º
 
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 
-" ÏÔÊ¾ÊéÇ©ÁĞ±í
+" æ˜¾ç¤ºä¹¦ç­¾åˆ—è¡¨
 
 let NERDTreeShowBookmarks=1
 
 
 
-""""""""""""""""""""""""""""""""""""""""""TagListÅäÖÃ
-let Tlist_Show_One_File=1     "²»Í¬Ê±ÏÔÊ¾¶à¸öÎÄ¼şµÄtag£¬Ö»ÏÔÊ¾µ±Ç°ÎÄ¼şµÄ  
-let Tlist_Ctags_Cmd="C:/Vim/vim80/ctags.exe" "½«taglistÓëctags¹ØÁª 
+""""""""""""""""""""""""""""""""""""""""""TagListé…ç½®
+let Tlist_Show_One_File=1     "ä¸åŒæ—¶æ˜¾ç¤ºå¤šä¸ªæ–‡ä»¶çš„tagï¼Œåªæ˜¾ç¤ºå½“å‰æ–‡ä»¶çš„  
+let Tlist_Ctags_Cmd="C:/Vim/vim80/ctags.exe" "å°†taglistä¸ctagså…³è” 
 
-let Tlist_WinWidth=35        "ÉèÖÃtaglist¿í¶È
-let Tlist_Exit_OnlyWindow=1  "tagList´°¿ÚÊÇ×îºóÒ»¸ö´°¿Ú£¬ÔòÍË³öVim
-let Tlist_Use_Right_Window=1 "ÔÚVim´°¿ÚÓÒ²àÏÔÊ¾taglist´°¿Ú
-let Tlist_Auto_Open=1    "ÔÚÆô¶¯VIMºó£¬×Ô¶¯´ò¿ªtaglist
+let Tlist_WinWidth=35        "è®¾ç½®taglistå®½åº¦
+let Tlist_Exit_OnlyWindow=1  "tagListçª—å£æ˜¯æœ€åä¸€ä¸ªçª—å£ï¼Œåˆ™é€€å‡ºVim
+let Tlist_Use_Right_Window=1 "åœ¨Vimçª—å£å³ä¾§æ˜¾ç¤ºtaglistçª—å£
+let Tlist_Auto_Open=1    "åœ¨å¯åŠ¨VIMåï¼Œè‡ªåŠ¨æ‰“å¼€taglist
 
 
 
