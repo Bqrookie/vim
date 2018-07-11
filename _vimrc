@@ -14,9 +14,14 @@ Plugin 'file://C:/Vim/vimfiles/bundle/taglist'
 
 filetype plugin indent on     " required!   
 
- 
+"½â¾ö²Ëµ¥ÂÒÂë
+"source $VIMRUNTIME/delmenu.vim
+"source $VIMRUNTIME/menu.vim 
+
+
 set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,cp936
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+"set fileencodings=ucs-bom,utf-8,cp936
 set fileencoding=gb2312
 set termencoding=utf-8 
 
