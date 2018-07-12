@@ -1,6 +1,6 @@
 ![logo-images](https://github.com/Bqrookie/vim/blob/master/vim.png)
 
-![Progress](http://progressed.io/bar/60?title=progress)  | [中文说明](https://github.com/Bqrookie/vim/blob/master/README_zh.md) 
+![Progress](http://progressed.io/bar/60?title=progress)
 
 ## What is Vim? ##
 
