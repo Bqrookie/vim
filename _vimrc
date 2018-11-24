@@ -23,8 +23,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 
 Plugin 'The-NERD-tree'
-Plugin 'ctags.vim'
+" Plugin 'ctags.vim'
 Plugin 'taglist.vim'
+" Plugin 'winmanager'
+" Plugin 'bufexplorer.zip'
 
 " 由Git支持但不再github上的插件仓库 Plugin 'git clone 后面的地址'
 " Plugin 'git://git.wincent.com/command-t.git'
@@ -103,7 +105,10 @@ set guifont=Courier_New:h13:cANSI   	" 设置字体
 autocmd BufWritePost $MYVIMRC source $MYVIMRC	" 让vimrc配置变更立即生效
 
 
-""""""""""""""""""""""""""""""""""""""""""NERDTree配置
+
+""""""""""""""""""""""""""""""
+" NERDTree Config 
+""""""""""""""""""""""""""""""
 "设定默认开启目录
 au VimEnter * NERDTree 
 
@@ -131,11 +136,24 @@ let NERDTreeShowBookmarks=1
 
 
 
-""""""""""""""""""""""""""""""""""""""""""Taglist配置
+""""""""""""""""""""""""""""""
+" Taglist Config 
+""""""""""""""""""""""""""""""
 "使用“F2”键就可以打开/关闭taglist窗口：
 map <F2> <Esc>:TlistToggle<Cr>
 
-
+let Tlist_Show_Menu = 1
 let Tlist_Show_One_File = 1            " 不同时显示多个文件的tag，只显示当前文件的
-"let Tlist_Exit_OnlyWindow = 1         " 如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Exit_OnlyWindow = 1         " 如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window = 1         " 在右侧窗口中显示taglist窗口 
+
+
+
+""""""""""""""""""""""""""""""
+" winmanager Config 
+""""""""""""""""""""""""""""""
+" let g:winManagerWindowLayout = "TagList|NERDTree,BufExplorer"
+" let g:winManagerWindowLayout = "TagList"	" 设置界面分割
+" let g:winManagerWidth = 30				" 设置winmanager的宽度，默认为25
+" nmap <silent> <F3> :WMToggle<cr>			" 定义打开关闭winmanager快捷键为F3
+" let g:AutoOpenWinManager = 1				" 在进入vim时自动打开winmanager
