@@ -135,13 +135,7 @@ let NERDTreeShowBookmarks=1
 "使用“F2”键就可以打开/关闭taglist窗口：
 map <F2> <Esc>:TlistToggle<Cr>
 
-let Tlist_Ctags_Cmd = '/usr/bin/ctags' 
-
-let Tlist_Auto_Open=1             	"打开文件时候自动打开Taglist窗口
-
-
-
 
 let Tlist_Show_One_File = 1            " 不同时显示多个文件的tag，只显示当前文件的
-"let Tlist_Exit_OnlyWindow = 1          " 如果taglist窗口是最后一个窗口，则退出vim
+"let Tlist_Exit_OnlyWindow = 1         " 如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window = 1         " 在右侧窗口中显示taglist窗口 
