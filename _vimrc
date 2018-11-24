@@ -1,5 +1,5 @@
 set nocompatible              " 去除VI一致性,必须要添加
-filetype off                  " 必须要添加
+filetype on                  " 必须要添加
 
 " 设置包括vundle和初始化相关的runtime path
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -20,7 +20,11 @@ Plugin 'VundleVim/Vundle.vim'
 " 来自 http://vim-scripts.org/vim/scripts.html 的插件
 " Plugin '插件名称' 实际上是 Plugin 'vim-scripts/插件仓库名' 只是此处的用户名可以省略
 " Plugin 'L9'
+
+
 Plugin 'The-NERD-tree'
+Plugin 'ctags.vim'
+Plugin 'taglist.vim'
 
 " 由Git支持但不再github上的插件仓库 Plugin 'git clone 后面的地址'
 " Plugin 'git://git.wincent.com/command-t.git'
@@ -107,7 +111,7 @@ au VimEnter * NERDTree
 map <leader>t :NERDTreeToggle<CR>
 
 " 是否显示隐藏文件
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=0
 
 " 显示行号
 let NERDTreeShowLineNumbers=1
@@ -124,3 +128,20 @@ let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 
 " 显示书签列表
 let NERDTreeShowBookmarks=1
+
+
+
+""""""""""""""""""""""""""""""""""""""""""Taglist配置
+"使用“F2”键就可以打开/关闭taglist窗口：
+map <F2> <Esc>:TlistToggle<Cr>
+
+let Tlist_Ctags_Cmd = '/usr/bin/ctags' 
+
+let Tlist_Auto_Open=1             	"打开文件时候自动打开Taglist窗口
+
+
+
+
+let Tlist_Show_One_File = 1            " 不同时显示多个文件的tag，只显示当前文件的
+"let Tlist_Exit_OnlyWindow = 1          " 如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Use_Right_Window = 1         " 在右侧窗口中显示taglist窗口 
