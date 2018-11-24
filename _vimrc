@@ -23,10 +23,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 
 Plugin 'The-NERD-tree'
-" Plugin 'ctags.vim'
+Plugin 'ctags.vim'
 Plugin 'taglist.vim'
-" Plugin 'winmanager'
-" Plugin 'bufexplorer.zip'
 
 " 由Git支持但不再github上的插件仓库 Plugin 'git clone 后面的地址'
 " Plugin 'git://git.wincent.com/command-t.git'
