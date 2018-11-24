@@ -1,118 +1,91 @@
-set nocompatible              " È¥³ıVIÒ»ÖÂĞÔ,±ØĞëÒªÌí¼Ó
-filetype on                  " ±ØĞëÒªÌí¼Ó
+set nocompatible              " å»é™¤VIä¸€è‡´æ€§,å¿…é¡»è¦æ·»åŠ 
+filetype off                  " å¿…é¡»è¦æ·»åŠ 
 
+" è®¾ç½®åŒ…æ‹¬vundleå’Œåˆå§‹åŒ–ç›¸å…³çš„runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" å¦ä¸€ç§é€‰æ‹©, æŒ‡å®šä¸€ä¸ªvundleå®‰è£…æ’ä»¶çš„è·¯å¾„
+"call vundle#begin('~/some/path/here')
 
-" ´Ë´¦¹æ¶¨VundleµÄÂ·¾¶  
-set rtp+=$VIM/vimfiles/bundle/vundle/  
-call vundle#rc('$VIM/vimfiles/bundle/')
-
-" ÈÃvundle¹ÜÀí²å¼ş°æ±¾,±ØĞë
+" è®©vundleç®¡ç†æ’ä»¶ç‰ˆæœ¬,å¿…é¡»
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'file://C:/Vim/vimfiles/bundle/NERD_tree'
-Plugin 'file://C:/Vim/vimfiles/bundle/solarized'
-Plugin 'file://C:/Vim/vimfiles/bundle/taglist'
 
-filetype plugin indent on     " required!   
-
-"½â¾ö²Ëµ¥ÂÒÂë
-"source $VIMRUNTIME/delmenu.vim
-"source $VIMRUNTIME/menu.vim 
+" ä»¥ä¸‹èŒƒä¾‹ç”¨æ¥æ”¯æŒä¸åŒæ ¼å¼çš„æ’ä»¶å®‰è£….
+" è¯·å°†å®‰è£…æ’ä»¶çš„å‘½ä»¤æ”¾åœ¨vundle#beginå’Œvundle#endä¹‹é—´.
+" Githubä¸Šçš„æ’ä»¶
+" æ ¼å¼ä¸º Plugin 'ç”¨æˆ·å/æ’ä»¶ä»“åº“å'
+" Plugin 'tpope/vim-fugitive'
 
 
+" æ¥è‡ª http://vim-scripts.org/vim/scripts.html çš„æ’ä»¶
+" Plugin 'æ’ä»¶åç§°' å®é™…ä¸Šæ˜¯ Plugin 'vim-scripts/æ’ä»¶ä»“åº“å' åªæ˜¯æ­¤å¤„çš„ç”¨æˆ·åå¯ä»¥çœç•¥
+" Plugin 'L9'
+Plugin 'The-NERD-tree'
+
+" ç”±Gitæ”¯æŒä½†ä¸å†githubä¸Šçš„æ’ä»¶ä»“åº“ Plugin 'git clone åé¢çš„åœ°å€'
+" Plugin 'git://git.wincent.com/command-t.git'
+
+
+" æœ¬åœ°çš„Gitä»“åº“(ä¾‹å¦‚è‡ªå·±çš„æ’ä»¶) Plugin 'file:///+æœ¬åœ°æ’ä»¶ä»“åº“ç»å¯¹è·¯å¾„'
+" Plugin 'file:///home/gmarik/path/to/plugin'
+
+" æ’ä»¶åœ¨ä»“åº“çš„å­ç›®å½•ä¸­.
+" æ­£ç¡®æŒ‡å®šè·¯å¾„ç”¨ä»¥è®¾ç½®runtimepath. ä»¥ä¸‹èŒƒä¾‹æ’ä»¶åœ¨sparkup/vimç›®å½•ä¸‹
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" å®‰è£…L9ï¼Œå¦‚æœå·²ç»å®‰è£…è¿‡è¿™ä¸ªæ’ä»¶ï¼Œå¯åˆ©ç”¨ä»¥ä¸‹æ ¼å¼é¿å…å‘½åå†²çª
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" ä½ çš„æ‰€æœ‰æ’ä»¶éœ€è¦åœ¨ä¸‹é¢è¿™è¡Œä¹‹å‰
+call vundle#end()            " å¿…é¡»
+filetype plugin indent on    " å¿…é¡» åŠ è½½vimè‡ªå¸¦å’Œæ’ä»¶ç›¸åº”çš„è¯­æ³•å’Œæ–‡ä»¶ç±»å‹ç›¸å…³è„šæœ¬
+" å¿½è§†æ’ä»¶æ”¹å˜ç¼©è¿›,å¯ä»¥ä½¿ç”¨ä»¥ä¸‹æ›¿ä»£:
+"filetype plugin on
+"
+" å¸¸ç”¨çš„å‘½ä»¤
+" :PluginList       - åˆ—å‡ºæ‰€æœ‰å·²é…ç½®çš„æ’ä»¶
+" :PluginInstall     - å®‰è£…æ’ä»¶,è¿½åŠ  `!` ç”¨ä»¥æ›´æ–°æˆ–ä½¿ç”¨ :PluginUpdate
+" :PluginSearch foo - æœç´¢ foo ; è¿½åŠ  `!` æ¸…é™¤æœ¬åœ°ç¼“å­˜
+" :PluginClean      - æ¸…é™¤æœªä½¿ç”¨æ’ä»¶,éœ€è¦ç¡®è®¤; è¿½åŠ  `!` è‡ªåŠ¨æ‰¹å‡†ç§»é™¤æœªä½¿ç”¨æ’ä»¶
+"
+" æŸ¥é˜… :h vundle è·å–æ›´å¤šç»†èŠ‚å’Œwikiä»¥åŠFAQ
+" å°†ä½ è‡ªå·±å¯¹éæ’ä»¶ç‰‡æ®µæ”¾åœ¨è¿™è¡Œä¹‹å
+
+
+
+" è®¾ç½®ç¼–ç 
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
 set encoding=utf-8
-set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-"set fileencodings=ucs-bom,utf-8,cp936
-set fileencoding=gb2312
-set termencoding=utf-8 
 
-set number "ÏÔÊ¾ĞĞºÅ
-set nowrap    "²»×Ô¶¯ÕÛĞĞ
-set showmatch    "ÏÔÊ¾Æ¥ÅäµÄÀ¨ºÅ
-set scrolloff=3        "¾àÀë¶¥²¿ºÍµ×²¿3ĞĞ"
-set mouse=a        "ÆôÓÃÊó±ê
-set hlsearch        "ËÑË÷¸ßÁÁ
-syntax on    "Óï·¨¸ßÁÁ
-set ambiwidth=double
+" æ˜¾ç¤ºè¡Œå·
+set nu
+" set number
 
-" ÔÊĞíÍË¸ñ¼üÉ¾³ıºÍtab²Ù×÷  
-set smartindent  
-set smarttab  
-set expandtab  
-set tabstop=4  
-set softtabstop=4  
-set shiftwidth=4  
-set backspace=2
-set textwidth=79
-colorscheme solarized
+" çªå‡ºæ˜¾ç¤ºå½“å‰è¡Œ
+set cursorline
+set cul          " cursorlineçš„ç¼©å†™å½¢å¼
 
-"Æô¶¯Ê±ÒşÈ¥Ô®ÖúÌáÊ¾
-set shortmess=atI
+" çªå‡ºæ˜¾ç¤ºå½“å‰åˆ—
+set cursorcolumn
+set cuc          " cursorcolumnçš„ç¼©å†™å½¢å¼
 
-set guifont=Courier_New:h13:cANSI   " ÉèÖÃ×ÖÌå  
-
-set tags=tags;
-set autochdir
-
-" ÃüÁîÀ´Éè¶¨"tags"ÎÄµµµÄÂ·¾¶£¬ÕâÑùvim²ÅÄÜÕÒµ½tagsÎÄµµ
-" set tags= "C:/Program Files (x86)/Vim/vimfiles/bundle/src"
+" å¯ç”¨é¼ æ ‡
+set mouse=a
+set selection=exclusive
+set selectmode=mouse,key
 
 
-"Òş²Ø¹¤¾ßÀ¸²Ëµ¥À¸
-set go=
-  
+set showmatch	" æ˜¾ç¤ºæ‹¬å·åŒ¹é…
 
-"ÔËĞĞpython  
+" è®¾ç½®ç¼©è¿›
+set tabstop=4	" è®¾ç½®Tabé•¿åº¦ä¸º4ç©ºæ ¼
+set shiftwidth=4	" è®¾ç½®è‡ªåŠ¨ç¼©è¿›é•¿åº¦ä¸º4ç©ºæ ¼
+set autoindent	" ç»§æ‰¿å‰ä¸€è¡Œçš„ç¼©è¿›æ–¹å¼ï¼Œé€‚ç”¨äºå¤šè¡Œæ³¨é‡Š
 
-map <F6> :Tlist<CR>
-map <F5> :!python.exe %<CR>
-
-
-
-
-""""""""""""""""""""""""""""""""""""""""""NERDTreeÅäÖÃ
-"Éè¶¨Ä¬ÈÏ¿ªÆôÄ¿Â¼
-au VimEnter * NERDTree 
-" ¹Ø±ÕNERDTree¿ì½İ¼ü
-
-map <leader>t :NERDTreeToggle<CR>
-
-
-
-" ÏÔÊ¾ĞĞºÅ
-
-let NERDTreeShowLineNumbers=1
-let NERDTreeAutoCenter=1
-
-" ÊÇ·ñÏÔÊ¾Òş²ØÎÄ¼ş
-
-let NERDTreeShowHidden=1
-
-" ÉèÖÃ¿í¶È
-
-let NERDTreeWinSize=31
-
-" ÔÚÖÕ¶ËÆô¶¯vimÊ±£¬¹²ÏíNERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
-
-" ºöÂÔÒ»ÏÂÎÄ¼şµÄÏÔÊ¾
-
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
-
-" ÏÔÊ¾ÊéÇ©ÁĞ±í
-
-let NERDTreeShowBookmarks=1
-
-
-
-""""""""""""""""""""""""""""""""""""""""""TagListÅäÖÃ
-let Tlist_Show_One_File=1     "²»Í¬Ê±ÏÔÊ¾¶à¸öÎÄ¼şµÄtag£¬Ö»ÏÔÊ¾µ±Ç°ÎÄ¼şµÄ  
-let Tlist_Ctags_Cmd="C:/Vim/vim80/ctags.exe" "½«taglistÓëctags¹ØÁª 
-
-let Tlist_WinWidth=35        "ÉèÖÃtaglist¿í¶È
-let Tlist_Exit_OnlyWindow=1  "tagList´°¿ÚÊÇ×îºóÒ»¸ö´°¿Ú£¬ÔòÍË³öVim
-let Tlist_Use_Right_Window=1 "ÔÚVim´°¿ÚÓÒ²àÏÔÊ¾taglist´°¿Ú
-let Tlist_Auto_Open=1    "ÔÚÆô¶¯VIMºó£¬×Ô¶¯´ò¿ªtaglist
-
-
-
+set paste	" è®¾ç½®ç²˜è´´æ¨¡å¼
+set listchars=tab:>-,trail:-	" æ˜¾ç¤ºç©ºæ ¼å’Œtabé”®
+set laststatus=2	" æ€»æ˜¯æ˜¾ç¤ºçŠ¶æ€æ 
+set ruler	" æ˜¾ç¤ºå…‰æ ‡å½“å‰ä½ç½®
+autocmd BufWritePost $MYVIMRC source $MYVIMRC	" è®©vimrcé…ç½®å˜æ›´ç«‹å³ç”Ÿæ•ˆ
 
