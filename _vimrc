@@ -58,34 +58,69 @@ set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
 
-" 显示行号
-set nu
-" set number
-
-" 突出显示当前行
-set cursorline
-set cul          " cursorline的缩写形式
-
-" 突出显示当前列
-set cursorcolumn
-set cuc          " cursorcolumn的缩写形式
-
 " 启用鼠标
 set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
 
 
-set showmatch	" 显示括号匹配
+" 允许退格键删除和tab操作  
+set smartindent  
+set smarttab  
+set expandtab  
+set tabstop=4  
+set softtabstop=4  
+set shiftwidth=4  
+set backspace=2
+set textwidth=79
 
 " 设置缩进
-set tabstop=4	" 设置Tab长度为4空格
-set shiftwidth=4	" 设置自动缩进长度为4空格
-set autoindent	" 继承前一行的缩进方式，适用于多行注释
+set tabstop=4				" 设置Tab长度为4空格
+set shiftwidth=4			" 设置自动缩进长度为4空格
+set autoindent				" 继承前一行的缩进方式，适用于多行注释
 
-set paste	" 设置粘贴模式
-set listchars=tab:>-,trail:-	" 显示空格和tab键
-set laststatus=2	" 总是显示状态栏
-set ruler	" 显示光标当前位置
+
+syntax on    				" 语法高亮
+set ambiwidth=double			" 防止特殊符号无法正常显示
+set showmatch				" 显示括号匹配
+set mouse=a       			" 启用鼠标
+set hlsearch        			" 搜索高亮
+set nu					" 显示行号
+set nowrap    				" 不自动折行
+set cursorline				" 突出显示当前行
+set cursorcolumn			" 突出显示当前列
+set paste				" 设置粘贴模式
+set listchars=tab:>-,trail:-		" 显示空格和tab键
+set laststatus=2			" 总是显示状态栏
+set ruler				" 显示光标当前位置
+set shortmess=atI			" 启动时隐去援助提示
+set guifont=Courier_New:h13:cANSI   	" 设置字体  
+
 autocmd BufWritePost $MYVIMRC source $MYVIMRC	" 让vimrc配置变更立即生效
 
+
+""""""""""""""""""""""""""""""""""""""""""NERDTree配置
+"设定默认开启目录
+au VimEnter * NERDTree 
+
+" 关闭NERDTree快捷键
+map <leader>t :NERDTreeToggle<CR>
+
+" 是否显示隐藏文件
+let NERDTreeShowHidden=1
+
+" 显示行号
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
+
+" 设置宽度
+let NERDTreeWinSize=31
+
+" 在终端启动vim时，共享NERDTree
+let g:nerdtree_tabs_open_on_console_startup=1
+
+" 忽略一下文件的显示
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+
+" 显示书签列表
+let NERDTreeShowBookmarks=1

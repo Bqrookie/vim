@@ -26,29 +26,18 @@ set fileencoding=gb2312
 set termencoding=utf-8 
 
 set number "显示行号
-set nowrap    "不自动折行
 set showmatch    "显示匹配的括号
 set scrolloff=3        "距离顶部和底部3行"
-set mouse=a        "启用鼠标
-set hlsearch        "搜索高亮
+
 syntax on    "语法高亮
 set ambiwidth=double
 
-" 允许退格键删除和tab操作  
-set smartindent  
-set smarttab  
-set expandtab  
-set tabstop=4  
-set softtabstop=4  
-set shiftwidth=4  
-set backspace=2
-set textwidth=79
+
 colorscheme solarized
 
-"启动时隐去援助提示
-set shortmess=atI
 
-set guifont=Courier_New:h13:cANSI   " 设置字体  
+
+
 
 set tags=tags;
 set autochdir
@@ -57,9 +46,6 @@ set autochdir
 " set tags= "C:/Program Files (x86)/Vim/vimfiles/bundle/src"
 
 
-"隐藏工具栏菜单栏
-set go=
-  
 
 "运行python  
 
@@ -69,38 +55,8 @@ map <F5> :!python.exe %<CR>
 
 
 
-""""""""""""""""""""""""""""""""""""""""""NERDTree配置
-"设定默认开启目录
-au VimEnter * NERDTree 
-" 关闭NERDTree快捷键
-
-map <leader>t :NERDTreeToggle<CR>
 
 
-
-" 显示行号
-
-let NERDTreeShowLineNumbers=1
-let NERDTreeAutoCenter=1
-
-" 是否显示隐藏文件
-
-let NERDTreeShowHidden=1
-
-" 设置宽度
-
-let NERDTreeWinSize=31
-
-" 在终端启动vim时，共享NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
-
-" 忽略一下文件的显示
-
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
-
-" 显示书签列表
-
-let NERDTreeShowBookmarks=1
 
 
 
