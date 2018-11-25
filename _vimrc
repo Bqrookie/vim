@@ -21,10 +21,12 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin '插件名称' 实际上是 Plugin 'vim-scripts/插件仓库名' 只是此处的用户名可以省略
 " Plugin 'L9'
 
+" 插件列表开始
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+" 插件列表结束
 
-Plugin 'The-NERD-tree'
-Plugin 'ctags.vim'
-Plugin 'taglist.vim'
+
 
 " 由Git支持但不再github上的插件仓库 Plugin 'git clone 后面的地址'
 " Plugin 'git://git.wincent.com/command-t.git'
@@ -44,7 +46,8 @@ Plugin 'taglist.vim'
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 " 忽视插件改变缩进,可以使用以下替代:
-"filetype plugin on
+
+
 "
 " 常用的命令
 " :PluginList       - 列出所有已配置的插件
@@ -56,6 +59,13 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 " 将你自己对非插件片段放在这行之后
 
 
+filetype plugin on			" 根据侦测到的不同类型加载对应的插件
+filetype indent on			" 自适应不同语言的智能缩进
+
+
+""""""""""""""""""""""""""""""
+" Vim Config 
+""""""""""""""""""""""""""""""
 
 " 设置编码
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -67,14 +77,13 @@ set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
 
-
 " 允许退格键删除和tab操作  
 set smartindent  
 set smarttab  
-set expandtab  
-set tabstop=4  
+set expandtab				" 将制表符扩展为空格  
+set tabstop=4				" 设置编辑时制表符占用空格数  
 set softtabstop=4  
-set shiftwidth=4  
+set shiftwidth=4			" 设置格式化时制表符占用空格数 
 set backspace=2
 set textwidth=79
 
@@ -83,12 +92,13 @@ set tabstop=4				" 设置Tab长度为4空格
 set shiftwidth=4			" 设置自动缩进长度为4空格
 set autoindent				" 继承前一行的缩进方式，适用于多行注释
 
-
 syntax on    				" 语法高亮
+set wildmenu				" vim 自身命令行模式智能补全
 set ambiwidth=double			" 防止特殊符号无法正常显示
 set showmatch				" 显示括号匹配
-set mouse=a       			" 启用鼠标
 set hlsearch        			" 搜索高亮
+set incsearch				" 开启实时搜索功能
+set ignorecase				" 搜索时大小写不敏感
 set nu					" 显示行号
 set nowrap    				" 不自动折行
 set cursorline				" 突出显示当前行
@@ -98,60 +108,46 @@ set listchars=tab:>-,trail:-		" 显示空格和tab键
 set laststatus=2			" 总是显示状态栏
 set ruler				" 显示光标当前位置
 set shortmess=atI			" 启动时隐去援助提示
-set guifont=Courier_New:h13:cANSI   	" 设置字体  
+set guifont=Courier_New:h15:cANSI   	" 设置字体  
 
-autocmd BufWritePost $MYVIMRC source $MYVIMRC	" 让vimrc配置变更立即生效
+
+
+
+
+map <silent> <F11> :call ToggleFullscreen()<CR>			" 全屏开/关快捷键
+autocmd BufWritePost $MYVIMRC source $MYVIMRC			" 让vimrc配置变更立即生效
 
 
 
 """"""""""""""""""""""""""""""
 " NERDTree Config 
 """"""""""""""""""""""""""""""
-"设定默认开启目录
-au VimEnter * NERDTree 
-
-" 关闭NERDTree快捷键
-map <leader>t :NERDTreeToggle<CR>
-
-" 是否显示隐藏文件
-let NERDTreeShowHidden=0
-
 " 显示行号
 let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 
-" 设置宽度
-let NERDTreeWinSize=31
-
-" 在终端启动vim时，共享NERDTree
-let g:nerdtree_tabs_open_on_console_startup=1
-
-" 忽略一下文件的显示
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
-
-" 显示书签列表
-let NERDTreeShowBookmarks=1
+au VimEnter * NERDTree			"设定默认开启目录
+map <leader>t :NERDTreeToggle<CR>	" 关闭NERDTree快捷键
+"let NERDTreeShowHidden=0		" 是否显示隐藏文件
+let NERDTreeWinSize=31			" 设置宽度
+let g:nerdtree_tabs_open_on_console_startup=1		" 在终端启动vim时，共享NERDTree
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']		" 忽略一下文件的显示
+let NERDTreeShowBookmarks=1				" 显示书签列表
 
 
 
 """"""""""""""""""""""""""""""
 " Taglist Config 
 """"""""""""""""""""""""""""""
-"使用“F2”键就可以打开/关闭taglist窗口：
-map <F2> <Esc>:TlistToggle<Cr>
-
-let Tlist_Show_Menu = 1
-let Tlist_Show_One_File = 1            " 不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow = 1         " 如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window = 1         " 在右侧窗口中显示taglist窗口 
+"map <F2> <Esc>:TlistToggle<Cr>				"使用“F2”键就可以打开/关闭taglist窗口
+"let Tlist_Show_Menu = 1
+"let Tlist_Show_One_File = 1           			" 不同时显示多个文件的tag，只显示当前文件的
+"let Tlist_Exit_OnlyWindow = 1         			" 如果taglist窗口是最后一个窗口，则退出vim
+"let Tlist_Use_Right_Window = 1         			" 在右侧窗口中显示taglist窗口 
 
 
 
-""""""""""""""""""""""""""""""
-" winmanager Config 
-""""""""""""""""""""""""""""""
-" let g:winManagerWindowLayout = "TagList|NERDTree,BufExplorer"
-" let g:winManagerWindowLayout = "TagList"	" 设置界面分割
-" let g:winManagerWidth = 30				" 设置winmanager的宽度，默认为25
-" nmap <silent> <F3> :WMToggle<cr>			" 定义打开关闭winmanager快捷键为F3
-" let g:AutoOpenWinManager = 1				" 在进入vim时自动打开winmanager
+
+
+
+
