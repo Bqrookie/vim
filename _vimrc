@@ -1,51 +1,22 @@
 set nocompatible              " 去除VI一致性,必须要添加
-filetype on                  " 必须要添加
+filetype on                   " 必须要添加
 
-" 设置包括vundle和初始化相关的runtime path
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" 另一种选择, 指定一个vundle安装插件的路径
-"call vundle#begin('~/some/path/here')
 
-" 让vundle管理插件版本,必须
+
 Plugin 'VundleVim/Vundle.vim'
 
-" 以下范例用来支持不同格式的插件安装.
-" 请将安装插件的命令放在vundle#begin和vundle#end之间.
-" Github上的插件
-" 格式为 Plugin '用户名/插件仓库名'
-" Plugin 'tpope/vim-fugitive'
-
-
-" 来自 http://vim-scripts.org/vim/scripts.html 的插件
-" Plugin '插件名称' 实际上是 Plugin 'vim-scripts/插件仓库名' 只是此处的用户名可以省略
-" Plugin 'L9'
-
-" 插件列表开始
+" Plugin Start
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
-" 插件列表结束
+" Plugin End
 
 
-
-" 由Git支持但不再github上的插件仓库 Plugin 'git clone 后面的地址'
-" Plugin 'git://git.wincent.com/command-t.git'
-
-
-" 本地的Git仓库(例如自己的插件) Plugin 'file:///+本地插件仓库绝对路径'
-" Plugin 'file:///home/gmarik/path/to/plugin'
-
-" 插件在仓库的子目录中.
-" 正确指定路径用以设置runtimepath. 以下范例插件在sparkup/vim目录下
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-" 安装L9，如果已经安装过这个插件，可利用以下格式避免命名冲突
-" Plugin 'ascenator/L9', {'name': 'newL9'}
-
-" 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
-" 忽视插件改变缩进,可以使用以下替代:
+
 
 
 "
@@ -55,8 +26,7 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 " :PluginSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
 " :PluginClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
 "
-" 查阅 :h vundle 获取更多细节和wiki以及FAQ
-" 将你自己对非插件片段放在这行之后
+
 
 
 filetype plugin on			" 根据侦测到的不同类型加载对应的插件
@@ -126,23 +96,23 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC			" 让vimrc配置变更立即生�
 let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 
-au VimEnter * NERDTree			"设定默认开启目录
-map <leader>t :NERDTreeToggle<CR>	" 关闭NERDTree快捷键
-"let NERDTreeShowHidden=0		" 是否显示隐藏文件
-let NERDTreeWinSize=31			" 设置宽度
-let g:nerdtree_tabs_open_on_console_startup=1		" 在终端启动vim时，共享NERDTree
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']		" 忽略一下文件的显示
-let NERDTreeShowBookmarks=1				" 显示书签列表
+au VimEnter * NERDTree						" 设定默认开启目录
+map <leader>t :NERDTreeToggle<CR>				" 关闭NERDTree快捷键
+"let NERDTreeShowHidden=0					" 是否显示隐藏文件
+let NERDTreeWinSize=31						" 设置宽度
+let g:nerdtree_tabs_open_on_console_startup=1			" 在终端启动vim时，共享NERDTree
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']			" 忽略一下文件的显示
+let NERDTreeShowBookmarks=1					" 显示书签列表
 
 
 
 """"""""""""""""""""""""""""""
 " Taglist Config 
 """"""""""""""""""""""""""""""
-"map <F2> <Esc>:TlistToggle<Cr>				"使用“F2”键就可以打开/关闭taglist窗口
+"map <F2> <Esc>:TlistToggle<Cr>					"使用“F2”键就可以打开/关闭taglist窗口
 "let Tlist_Show_Menu = 1
-"let Tlist_Show_One_File = 1           			" 不同时显示多个文件的tag，只显示当前文件的
-"let Tlist_Exit_OnlyWindow = 1         			" 如果taglist窗口是最后一个窗口，则退出vim
+"let Tlist_Show_One_File = 1           				" 不同时显示多个文件的tag，只显示当前文件的
+"let Tlist_Exit_OnlyWindow = 1         				" 如果taglist窗口是最后一个窗口，则退出vim
 "let Tlist_Use_Right_Window = 1         			" 在右侧窗口中显示taglist窗口 
 
 
