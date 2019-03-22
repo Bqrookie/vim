@@ -1,1 +1,1 @@
-viminfo
+## my vimrc for linux
