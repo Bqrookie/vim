@@ -23,8 +23,12 @@ syntax on                               " 语法高亮
 set ruler                               " 显示光标当前位置
 set hlsearch                            " 搜索高亮
 set laststatus=2                        " 总是显示状态栏
-colorscheme Tomorrow-Night              " 设置主题
+"colorscheme Tomorrow-Night              " 设置主题
 set guifont=Courier_New:h15:cANSI       " 设置字体
+
+map <F3> :NERDTreeMirror<CR>		"设置目录树
+map <F3> :NERDTreeToggle<CR>
+autocmd VimEnter * NERDTree		"打开vim自动展开
 
 
 "==========================================
@@ -65,7 +69,8 @@ set cursorcolumn                        " 突出显示当前列
 "==========================================
 " Other Settings
 "==========================================
-
+"关闭最后一个窗口自动关闭nerdtree
+autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
 
 "==========================================
 " HotKey Settings
