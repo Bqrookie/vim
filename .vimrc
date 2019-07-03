@@ -26,8 +26,8 @@ set laststatus=2                        " 总是显示状态栏
 "colorscheme Tomorrow-Night              " 设置主题
 set guifont=Courier_New:h15:cANSI       " 设置字体
 
-map <F3> :NERDTreeMirror<CR>		"设置目录树
-map <F3> :NERDTreeToggle<CR>
+"map <F3> :NERDTreeMirror<CR>		"设置目录树
+"map <F3> :NERDTreeToggle<CR>
 autocmd VimEnter * NERDTree		"打开vim自动展开
 
 
@@ -73,8 +73,13 @@ set cursorcolumn                        " 突出显示当前列
 autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
 
 "==========================================
-" HotKey Settings
+" Plug  Settings
 "==========================================
+call plug#begin('~/.vim/plugged')
+"目录树
+Plug 'scrooloose/nerdtree',{'on':'NERDTreeToggle'} 
+
+call plug#end()
 
 
 
