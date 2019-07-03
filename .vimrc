@@ -29,7 +29,7 @@ set guifont=Courier_New:h15:cANSI       " 设置字体
 "map <F3> :NERDTreeMirror<CR>		"设置目录树
 "map <F3> :NERDTreeToggle<CR>
 autocmd VimEnter * NERDTree		"打开vim自动展开
-
+autocmd VimEnter * TagbarToggle
 
 "==========================================
 "Code Settings
@@ -78,7 +78,8 @@ autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(win
 call plug#begin('~/.vim/plugged')
 "目录树
 Plug 'scrooloose/nerdtree',{'on':'NERDTreeToggle'} 
-
+"代码导航栏，列举函数、对象、变量等信息
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 
